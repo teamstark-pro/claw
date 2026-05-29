@@ -1,0 +1,39 @@
+# Node.js
+node_modules/
+dist/
+build/
+.npm
+.eslintcache
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+backend/venv/
+frontend/node_modules/
+frontend/dist/
+backend/__pycache__/
+backend/db.json
+cookies.txt
+resp.txt
+*.log

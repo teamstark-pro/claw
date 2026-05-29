@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+requests[socks]
+PySocks
+python-dotenv
+pydantic
+python-multipart
+curl_cffi
