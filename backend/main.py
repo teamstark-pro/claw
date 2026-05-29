@@ -307,3 +307,13 @@ async def upload_file(file: UploadFile = File(...)):
 async def new_chat():
     session.conversation_id = ""
     return {"status": "success"}
+
+# Serve static files for production (MUST BE AT THE END)
+if os.path.exists("static"):
+    app.mount("/", StaticFiles(directory="static", html=True), name="static")
+    
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        # Always serve index.html for unknown routes (SPA support)
+        return FileResponse("static/index.html")
+

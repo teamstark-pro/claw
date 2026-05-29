@@ -4,7 +4,7 @@ import { MessageSquare, Settings as SettingsIcon, LogOut } from 'lucide-react';
 import { ChatInterface } from './components/ChatInterface';
 import { Settings } from './components/Settings';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE || '';
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem('app_token'));

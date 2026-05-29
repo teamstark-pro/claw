@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Key, Shield, Globe, Plus, Trash2, Check, AlertCircle, RefreshCw, ExternalLink, List } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE || '';
 
 export const Settings: React.FC = () => {
   const [sessionKey, setSessionKey] = useState('');

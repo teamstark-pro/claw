@@ -30,7 +30,7 @@ interface ChatSession {
   updatedAt: number;
 }
 
-const API_BASE = 'http://localhost:8000';
+const API_BASE = import.meta.env.VITE_API_BASE || '';
 
 export const ChatInterface: React.FC = () => {
   const [sessions, setSessions] = useState<ChatSession[]>([]);
